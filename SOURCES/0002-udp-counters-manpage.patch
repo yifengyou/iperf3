@@ -1,0 +1,18 @@
+diff --git a/src/iperf3.1 b/src/iperf3.1
+index 05483a9..35a0873 100644
+--- a/src/iperf3.1
++++ b/src/iperf3.1
+@@ -329,6 +329,13 @@ If the client is run with \fB--json\fR, the server output is included
+ in a JSON object; otherwise it is appended at the bottom of the
+ human-readable output.
+ .TP
++.BR --udp-counters-64bit
++Use 64-bit counters in UDP test packets.
++The use of this option can help prevent counter overflows during long
++or high-bitrate UDP tests.  Both client and server need to be running
++at least version 3.1 for this option to work.  It may become the
++default behavior at some point in the future.
++.TP
+ .BR --username " \fIusername\fR" 
+ username to use for authentication to the iperf server (if built with
+ OpenSSL support).
